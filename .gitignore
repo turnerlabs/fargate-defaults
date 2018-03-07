@@ -1,0 +1,7 @@
+node_modules
+hidden.env
+.DS_Store
+ram.json
+memory.json
+cpu.json
+output.json

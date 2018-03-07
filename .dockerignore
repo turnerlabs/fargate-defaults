@@ -1,0 +1,8 @@
+node_modules
+.editorconfig
+.git
+ram.json
+memory.json
+cpu.json
+output.json
+hidden.env

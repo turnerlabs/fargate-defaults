@@ -1,0 +1,22 @@
+{
+  "name": "fargate-defaults",
+  "version": "0.1.0",
+  "description": "Get default cpu and memory for a Fargate Shipment",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wwise",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "dogapi": "^2.8.0",
+    "express": "^4.16.2",
+    "mathjs": "^4.0.0",
+    "morgan": "^1.9.0"
+  },
+  "engines": {
+    "node": "8.10.0"
+  }
+}
