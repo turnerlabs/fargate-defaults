@@ -6,3 +6,4 @@ memory.json
 cpu.json
 output.json
 hidden.env
+.terraform

@@ -1,0 +1,7 @@
+shipments:
+  ca-fargate-defaults:
+    env: dev
+    barge: digital-sandbox
+    replicas: 2
+    containers:
+    - fargate-defaults

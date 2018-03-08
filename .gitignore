@@ -5,3 +5,4 @@ ram.json
 memory.json
 cpu.json
 output.json
+.terraform

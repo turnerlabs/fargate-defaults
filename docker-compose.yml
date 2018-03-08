@@ -1,0 +1,11 @@
+version: "2"
+services:
+  fargate-defaults:
+    build: .
+    image: quay.io/turner/fargate-defaults:0.1.0
+    ports:
+    - 80:12789
+    environment:
+      HEALTHCHECK: /_hc
+    env_file:
+    - hidden.env
