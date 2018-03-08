@@ -46,7 +46,7 @@ Returns an object describing the min and max values seen for the metric over the
 }
 ```
 
-### GET `/v1/:shipment/:environment[/:from-:to]`
+### GET `/v1/:shipment/:environment/:from-:to`
 
 This endpoint does not use the typical `:timeframe`, instead it offers the ability to pick a very specific
 timeframe via `:from` and `:to`, which are both POSIX timestamp values.

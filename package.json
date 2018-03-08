@@ -1,6 +1,6 @@
 {
   "name": "fargate-defaults",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Get default cpu and memory for a Fargate Shipment",
   "main": "app.js",
   "scripts": {
