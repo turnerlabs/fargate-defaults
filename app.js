@@ -34,11 +34,24 @@ app.get('/v1/ram/:shipment/:environment/:timeframe', dd.init, dd.rawMemory, main
 
 // See currated results
 app.get('/v1/:shipment/:environment', dd.init, dd.cpu, dd.memory, main.send)
+app.get('/v1/:shipment/:environment/:from-:to', dd.init, dd.cpu, dd.memory, main.send)
 app.get('/v1/:shipment/:environment/:timeframe', dd.init, dd.cpu, dd.memory, main.send)
 
 app.use((err, req, res, next) => {
-     res.status(500)
-     res.json({ error: true, message: err.message || err || "Something went wrong" })
+    if (res.headersSent) {
+        return next(err)
+    }
+
+    let code = err.code || err.status || 500
+
+    res.status(code)
+    res.json({ error: true, code, message: err.message || err || "Something went wrong" })
+})
+
+app.use((req, res) => {
+    let code = 404
+    res.status(code)
+    res.json({ error: true, code, message: `path "${req.path}" does not exist` })
 })
 
 if (process.env.DATADOG_API_KEY && process.env.DATADOG_APP_KEY) {
